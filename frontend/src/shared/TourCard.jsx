@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, CardBody } from "reactstrap"
 import {Link} from 'react-router-dom'
 import calculateAvgRating from '../utils/avgRating'
+import { BASE_URL } from '../utils/config'
 
 import "./tour-card.css"
 
@@ -21,10 +22,10 @@ const TourCard = ({tour}) => {
         <CardBody>
         <div className="card__top d-flex align-items-center justify-content-between">
           <span className='tour__location d-flex align-items-center gap-1'>
-            <i class='ri-map-pin-line'></i> {city}
+            <i className='ri-map-pin-line'></i> {city}
           </span>
           <span className='tour__rating d-flex align-items-center gap-1'>
-            <i class='ri-star-fill'></i> {avgRating === 0 ? null : avgRating}
+            <i className='ri-star-fill'></i> {avgRating === 0 ? null : avgRating}
             {totalRating === 0 ? (
                'Not rated' 
             ) : (
@@ -33,12 +34,12 @@ const TourCard = ({tour}) => {
           </span>
         </div>
         <h5 className='tour__title'>
-          <Link to={`/destinations/${id}`}>{title}</Link>
+          <Link to={`/tours/${id}`}>{title}</Link>
         </h5>
         <div className="card__bottom d-flex align-items-center justify-content-between mt-3">
           <h5>KES {price} <span> /per person</span></h5>
           <button className="btn booking__btn">
-            <Link to={`/destinations/${id}`}>Book Now</Link>
+            <Link to={`/tours/${id}`}>Book Now</Link>
           </button>
         </div>
       </CardBody>

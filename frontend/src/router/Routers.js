@@ -1,8 +1,9 @@
 import React from 'react'
 import {Routes, Route, Navigate} from 'react-router-dom'
 import Home from '../pages/Home'
-import Destinations from '../pages/Destinations'
-import DestinationDetails from '../pages/DestinationDetails'
+import Tours from '../pages/Tours'
+import TourDetails from '../pages/TourDetails'
+import ContactForm from '../pages/Contact'
 import Login from '../pages/Login'
 import Register from '../pages/Register'
 import SearchResultList from '../pages/SearchResultList'
@@ -13,12 +14,13 @@ const Routers = () => {
     <Routes>
         <Route path='/' element={<Navigate to='/home'/>} />
         <Route path='/home' element={<Home/>} />
-        <Route path='/destinations' element={<Destinations/>} />
-        <Route path='/destinations/:id' element={<DestinationDetails/>} />
+        <Route path='/tours' element={<Tours/>} />
+        <Route path='/tours/:id' element={<TourDetails/>} />
+        <Route path='/contact' element={<ContactForm/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/register' element={<Register/>} />
         <Route path='/thank-you' element={<ThankYou/>} />
-        <Route path='/destinations/search' element={<SearchResultList/>} />
+        <Route path='/tours/search' element={<SearchResultList/>} />
     </Routes>
   )
 }

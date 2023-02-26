@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/home.css'
 import { Container, Row, Col } from 'reactstrap'
 import heroImg from '../assets/images/hero-img01.jpg'
-import heroImg02 from '../assets/images/hero-img02.jpg'
+import heroImg02 from '../assets/images/hero-img02.jpeg'
 import heroVideo from '../assets/images/hero-video.mp4'
 import Subtitle from './../shared/Subtitle'
 import worldImg from './../assets/images/world.png'
@@ -30,9 +30,9 @@ const Home = () => {
               </div>
               <h1>Travelling opens the door to creating <span className="highlight">memories</span></h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Quas ea praesentium temporibus ut inventore officia magni voluptatum voluptate dolor 
-                distinctio mollitia nobis, Perspiciatis rerum magnam hic in earum fugiat.
+                Our team of professionals, with a tremendous wealth of experience in the travel industry, 
+                is capable of fulfilling every clients' needs while travelling with us. 
+                Our main goal has always been to achieve client satisfaction.
               </p>
             </div>
           </Col>
@@ -48,7 +48,7 @@ const Home = () => {
             </div>
           </Col>
           <Col lg='2'>
-            <div className="hero__img-box mt-5">
+            <div className="hero__img-box hero__video mt-5">
               <img src={heroImg02} alt="" />
             </div>
           </Col>
@@ -69,7 +69,7 @@ const Home = () => {
           </Col>
           <ServiceList/>
         </Row>
-      </Container>
+      </Container> 
     </section>
     {/*============ Services End ============== */}
 
